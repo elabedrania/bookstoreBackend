@@ -11,8 +11,10 @@ const categoryRouter = require('./Routers/category.router');
 app.use('/categories', categoryRouter);
 const bookRouter = require('./Routers/book.router');
 app.use('/books', bookRouter);
-const userRouter = require("./Routers/authRoute");
-app.use('/auth', userRouter);
+const authRouter = require("./Routers/authRoute");
+app.use('/auth', authRouter);
+const userRouter = require("./Routers/user.router");
+app.use('/user', userRouter);
 
 
 mongoose.connect(process.env.CONNECTION_STRING , {
